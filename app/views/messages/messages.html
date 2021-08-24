@@ -1,0 +1,71 @@
+
+{% extends "layout.html" %}
+
+
+
+{% block content %}
+
+<div class="moj-sub-navigation">
+
+  <div class="moj-sub-navigation__container">
+
+    <div class="moj-sub-navigation__nav">
+
+      <nav class="moj-sub-navigation" aria-label="sub navigation">
+
+        <ul class="moj-sub-navigation__list">
+          <li class="moj-sub-navigation__item">
+            <a class="moj-sub-navigation__link" href="../../home.html">Account Home</a>
+          </li>
+
+          <li class="moj-sub-navigation__item">
+            <a class="moj-sub-navigation__link" aria-current="page" href="messages/messages.html">Messages<span id="notifications" class="moj-notification-badge">3</span></a> 
+
+
+          </li>
+
+          <li class="moj-sub-navigation__item">
+            <a class="moj-sub-navigation__link" href="/company-details/company-details">Company details</a>
+          </li>
+          <li class="moj-sub-navigation__item">
+            <a class="moj-sub-navigation__link" href="/payments/payments.html">Payments</a>
+          </li>
+          <li class="moj-sub-navigation__item">
+            <a class="moj-sub-navigation__link" href="/employee-details/employee-details.html">Employee details</a>
+          </li>
+        </ul>
+
+      </nav>
+
+    </div>
+  </div>
+
+</div>
+<a href="#" role="button" draggable="false" class="govuk-button govuk-button" data-module="govuk-button">
+    New message
+   </a>
+<table class="govuk-table">
+    <caption class="govuk-table__caption govuk-table__caption--m">Your messages</caption>
+    <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header">Subject</th>
+          <th scope="col" class="govuk-table__header">Date</th>
+        </tr>
+      </thead>
+    <tbody class="govuk-table__body">
+      <tr class="govuk-table__row">
+        <th scope="row" class="govuk-table__header"><a href="">Payment recieved</a></th>
+        <td class="govuk-table__cell">July 17 2021</td>
+      </tr>
+      <tr class="govuk-table__row">
+        <th scope="row" class="govuk-table__header"><a href="">Payment sent</a></th>
+        <td class="govuk-table__cell">July 14 2021</td>
+      </tr>
+      <tr class="govuk-table__row">
+        <th scope="row" class="govuk-table__header"><a href="">Change to payment amount</a></th>
+        <td class="govuk-table__cell">July 1 2021</td>
+      </tr>
+    </tbody>
+  </table>
+
+{% endblock %}
