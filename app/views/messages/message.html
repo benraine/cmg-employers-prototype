@@ -1,0 +1,43 @@
+{% extends "layout.html" %}
+
+
+
+{% block content %}
+{% include "includes/account-menu.html" %}
+<section class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">Message</h1>
+      <p class="govuk-body">
+        To download this message as a PDF, click the download link at the top of the message. For more help on downloading a PDF see our <a class="govuk-link" href="#" data-cw-hint="This link is not accessible from Navigable Model">How to use this site</a>
+        on our help section or <a class="govuk-link" href="/navigable-model/emp/contact-us/">contact us</a>.
+      </p>
+      <div class="margin-large">
+        <dl class="govuk-summary-list">
+          <div class="govuk-summary-list__row">
+            <dt class=" govuk-summary-list__key" width="10%">Subject
+              </dt><dd class="govuk-summary-list__value word-wrap-break-word" width="90%"><b>Your employee child maintenance payment schedule</b>
+          </dd></div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">Date
+            </dt><dd class="govuk-summary-list__value word-wrap-break-word">04 August 2019 01:04 am
+          </dd></div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">Attachments
+            </dt><dd class="govuk-summary-list__value word-wrap-break-word">
+              <ul class="govuk-list govuk-list--bullet no-margin-bottom">
+                    <li><a class="govuk-link" data-cw-hint="This link allows the customer to view/download the PDF file">Letter 1</a></li>
+              </ul>
+          </dd></div>
+        </dl>
+      </div>
+      <p class="govuk-body">
+        <a class="govuk-button" href="/navigable-model/emp/my-messages/contact-history/">Back</a>
+      </p>
+      <div class="govuk-!-margin-bottom-4">
+        <p class="govuk-body">You need Adobe Acrobat Reader to view the PDF files. If you dont already have it on your computer, you can install the latest version by clicking on the link below.</p>
+        <a href="#" data-cw-hint="This link is not accessible from Navigable Model"><img src="/navigable-model/images/uk/get_adobe_reader.png" class="cvc-img" alt="Link to adobe reader download."></a>
+      </div>
+    </div>
+  </section>
+
+{% endblock %}
