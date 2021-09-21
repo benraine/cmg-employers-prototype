@@ -3,31 +3,142 @@
 
 {% block content %}
 {% include "includes/account-menu.html" %}
-<a href="send-message.html" role="button" draggable="false" class="govuk-button govuk-button" data-module="govuk-button">
+<section class="govuk-grid-row">
+  <h1 class="govuk-heading-xl">Your messages</h1>
+  <a href="send-message.html" role="button" draggable="false" class="govuk-button govuk-button" data-module="govuk-button">
     New message
-   </a>
-<table class="govuk-table">
-    <caption class="govuk-table__caption govuk-table__caption--m">Your messages</caption>
-    <thead class="govuk-table__head">
+  </a>
+</section>
+<section class="govuk-grid-row">
+  <div class="govuk-grid-column-one-third">
+    <h2 class="govuk-heading-m"> Filters</h2>
+    <h3 class="govuk-heading-s"> Date received</h3>
+    <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
+      <legend class="govuk-fieldset__legend govuk-fieldset__legend-s">
+        <h4 class="govuk-fieldset__heading">
+          Messages received after
+        </h4>
+      </legend>
+      <div id="passport-issued-hint" class="govuk-hint">
+        For example, 27 3 2007
+      </div>
+      <div class="govuk-date-input" id="passport-issued">
+        <div class="govuk-date-input__item">
+          <div class="govuk-form-group">
+            <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+              Day
+            </label>
+            <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" pattern="[0-9]*" inputmode="numeric"></div>
+        </div>
+        <div class="govuk-date-input__item">
+          <div class="govuk-form-group">
+            <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+              Month
+            </label>
+            <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" pattern="[0-9]*" inputmode="numeric"></div>
+        </div>
+        <div class="govuk-date-input__item">
+          <div class="govuk-form-group">
+            <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+              Year
+            </label>
+            <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" pattern="[0-9]*" inputmode="numeric"></div>
+        </div>
+      </div>
+
+    </fieldset>
+    <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
+      <legend class="govuk-fieldset__legend govuk-fieldset__legend-s">
+        <h4 class="govuk-fieldset__heading">
+          Messages received before
+        </h4>
+      </legend>
+      <div id="passport-issued-hint" class="govuk-hint">
+        For example, 27 3 2007
+      </div>
+      <div class="govuk-date-input" id="passport-issued">
+        <div class="govuk-date-input__item">
+          <div class="govuk-form-group">
+            <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+              Day
+            </label>
+            <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" pattern="[0-9]*" inputmode="numeric"></div>
+        </div>
+        <div class="govuk-date-input__item">
+          <div class="govuk-form-group">
+            <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+              Month
+            </label>
+            <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" pattern="[0-9]*" inputmode="numeric"></div>
+        </div>
+        <div class="govuk-date-input__item">
+          <div class="govuk-form-group">
+            <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+              Year
+            </label>
+            <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" pattern="[0-9]*" inputmode="numeric"></div>
+        </div>
+      </div>
+
+    </fieldset>
+    <p>
+      <a href="message">Clear all filters</a>
+    </p>
+    <p>
+      <a href="#" role="button" draggable="false" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+        New message
+      </a>
+    </p>
+  </div>
+  <div class="govuk-grid-column-two-thirds">
+    <table class="govuk-table">
+      <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header">Subject</th>
+            <th scope="col" class="govuk-table__header">Date</th>
+          </tr>
+        </thead>
+      <tbody class="govuk-table__body">
         <tr class="govuk-table__row">
-          <th scope="col" class="govuk-table__header">Subject</th>
-          <th scope="col" class="govuk-table__header">Date</th>
+          <th scope="row" class="govuk-table__header"><a href="message">Payment recieved</a></th>
+          <td class="govuk-table__cell">July 17 2021</td>
         </tr>
-      </thead>
-    <tbody class="govuk-table__body">
-      <tr class="govuk-table__row">
-        <th scope="row" class="govuk-table__header"><a href="message">Payment recieved</a></th>
-        <td class="govuk-table__cell">July 17 2021</td>
-      </tr>
-      <tr class="govuk-table__row">
-        <th scope="row" class="govuk-table__header"><a href="message">Payment sent</a></th>
-        <td class="govuk-table__cell">July 14 2021</td>
-      </tr>
-      <tr class="govuk-table__row">
-        <th scope="row" class="govuk-table__header"><a href="message">Change to payment amount</a></th>
-        <td class="govuk-table__cell">July 1 2021</td>
-      </tr>
-    </tbody>
-  </table>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header"><a href="message">Payment sent</a></th>
+          <td class="govuk-table__cell">July 14 2021</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header"><a href="message">Change to payment amount</a></th>
+          <td class="govuk-table__cell">July 1 2021</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header"><a href="message">Payment recieved</a></th>
+          <td class="govuk-table__cell">July 17 2021</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header"><a href="message">Payment sent</a></th>
+          <td class="govuk-table__cell">July 14 2021</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header"><a href="message">Change to payment amount</a></th>
+          <td class="govuk-table__cell">July 1 2021</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header"><a href="message">Payment recieved</a></th>
+          <td class="govuk-table__cell">July 17 2021</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header"><a href="message">Payment sent</a></th>
+          <td class="govuk-table__cell">July 14 2021</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header"><a href="message">Change to payment amount</a></th>
+          <td class="govuk-table__cell">July 1 2021</td>
+        </tr>
+      </tbody>
+    </table>
+    
+  </div>
+</section>
 
 {% endblock %}
