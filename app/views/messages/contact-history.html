@@ -3,82 +3,57 @@
 
 {% block content %}
 {% include "includes/account-menu.html" %}
-<section class="govuk-grid-row">
-  <h1 class="govuk-heading-xl">Your messages</h1>
-  <a href="send-message.html" role="button" draggable="false" class="govuk-button govuk-button" data-module="govuk-button">
-    New message
-  </a>
-</section>
+
+<div class="govuk-breadcrumbs">
+  <ol class="govuk-breadcrumbs__list">
+
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="/home">Home</a>
+    </li>
+
+    <li class="govuk-breadcrumbs__list-item" aria-current="page">Messages</li>
+  </ol>
+</div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-half">
+    <h1 class="govuk-heading-xl">Messages</h1>
+  </div>
+  <div class="govuk-grid-column-one-half">
+    <a href="send-message.html" style="float: right" role="button" draggable="false" class="govuk-button govuk-button" data-module="govuk-button">
+      New message
+    </a>
+  </div>
+</div>
+
 <section class="govuk-grid-row">
   <div class="govuk-grid-column-one-third">
     <h2 class="govuk-heading-m"> Filters</h2>
     <h3 class="govuk-heading-s"> Date received</h3>
-    <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
-      <legend class="govuk-fieldset__legend govuk-fieldset__legend-s">
-        <h4 class="govuk-fieldset__heading">
-          Messages received after
-        </h4>
-      </legend>
-      <div id="passport-issued-hint" class="govuk-hint">
-        For example, 27 3 2007
-      </div>
-      <div class="govuk-date-input" id="passport-issued">
-        <div class="govuk-date-input__item">
-          <div class="govuk-form-group">
-            <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
-              Day
-            </label>
-            <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" pattern="[0-9]*" inputmode="numeric"></div>
-        </div>
-        <div class="govuk-date-input__item">
-          <div class="govuk-form-group">
-            <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
-              Month
-            </label>
-            <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" pattern="[0-9]*" inputmode="numeric"></div>
-        </div>
-        <div class="govuk-date-input__item">
-          <div class="govuk-form-group">
-            <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
-              Year
-            </label>
-            <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" pattern="[0-9]*" inputmode="numeric"></div>
-        </div>
-      </div>
 
-    </fieldset>
-    <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
-      <legend class="govuk-fieldset__legend govuk-fieldset__legend-s">
-        <h4 class="govuk-fieldset__heading">
-          Messages received before
-        </h4>
-      </legend>
-      <div id="passport-issued-hint" class="govuk-hint">
-        For example, 27 3 2007
-      </div>
-      <div class="govuk-date-input" id="passport-issued">
-        <div class="govuk-date-input__item">
-          <div class="govuk-form-group">
-            <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
-              Day
-            </label>
-            <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" pattern="[0-9]*" inputmode="numeric"></div>
-        </div>
-        <div class="govuk-date-input__item">
-          <div class="govuk-form-group">
-            <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
-              Month
-            </label>
-            <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" pattern="[0-9]*" inputmode="numeric"></div>
-        </div>
-        <div class="govuk-date-input__item">
-          <div class="govuk-form-group">
-            <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
-              Year
-            </label>
-            <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" pattern="[0-9]*" inputmode="numeric"></div>
-        </div>
-      </div>
+        {{ govukInput({
+          label: {
+            text: "Messages received after",
+            classes: "govuk-label"
+          },
+          id: "messages-after",
+          name: "messages-after",
+          hint: {
+            text: "For example 2020 or 21/11/2020"
+          }
+        }) }}
+
+        {{ govukInput({
+          label: {
+            text: "Messages received before",
+            classes: "govuk-label"
+          },
+          id: "messages-before",
+          name: "messages-before",
+          hint: {
+            text: "For example 2020 or 21/11/2020"
+          }
+        }) }}
 
     </fieldset>
     <p>
@@ -86,7 +61,7 @@
     </p>
     <p>
       <a href="#" role="button" draggable="false" class="govuk-button govuk-button--secondary" data-module="govuk-button">
-        New message
+        Apply filter
       </a>
     </p>
   </div>
@@ -137,6 +112,17 @@
         </tr>
       </tbody>
     </table>
+
+    <div class="messages-pagination">
+      <ul class="govuk-list">
+        <li><a href="#" class="govuk-link"><< Previous</a></li>
+        <li><a href="#" class="govuk-link">1</a></li>
+        <li><a href="#" class="govuk-link">2</a></li>
+        <li><a href="#" class="govuk-link">3</a></li>
+        <li><a href="#" class="govuk-link">4</a></li>
+        <li><a href="#" class="govuk-link">Next >></a></li>
+      </ul>
+    </div>
     
   </div>
 </section>

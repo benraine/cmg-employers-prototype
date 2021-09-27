@@ -16,3 +16,23 @@ $govuk-assets-path: '/govuk/assets/';
 @import "patterns/related-items";
 
 // Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you
+
+.messages-pagination {
+  ul {
+    list-style-type: none;
+    li {
+      display: inline-block;
+      margin-right: 15px;
+      a {
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+.message-summary {
+  .govuk-summary-list__key {
+    width: 75%;
+    font-weight: normal;
+  }
+}

@@ -5,42 +5,7 @@
 
 {% block content %}
 
-<div class="moj-sub-navigation">
-
-  <div class="moj-sub-navigation__container">
-
-    <div class="moj-sub-navigation__nav">
-
-      <nav class="moj-sub-navigation" aria-label="sub navigation">
-
-        <ul class="moj-sub-navigation__list">
-          <li class="moj-sub-navigation__item">
-            <a class="moj-sub-navigation__link" href="../../home.html">Account Home</a>
-          </li>
-
-          <li class="moj-sub-navigation__item">
-            <a class="moj-sub-navigation__link" a href="messages/messages.html">Messages<span id="notifications" class="moj-notification-badge">3</span></a> 
-
-
-          </li>
-
-          <li class="moj-sub-navigation__item">
-            <a class="moj-sub-navigation__link" href="/company-details/company-details">Company details</a>
-          </li>
-          <li class="moj-sub-navigation__item">
-            <a class="moj-sub-navigation__link" href="/payments/payments.html">Payments</a>
-          </li>
-          <li class="moj-sub-navigation__item">
-            <a class="moj-sub-navigation__link" href="/employee-details/employee-details.html">Employee details</a>
-          </li>
-        </ul>
-
-      </nav>
-
-    </div>
-  </div>
-
-</div>
+{% include "includes/account-menu.html" %}
 
 <div class="govuk-form-group">
     <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--l" for="more-detail">
