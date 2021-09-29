@@ -4,27 +4,40 @@
 
 {% block content %}
 {% include "includes/account-menu.html" %}
+
+<div class="govuk-breadcrumbs">
+  <ol class="govuk-breadcrumbs__list">
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="/home">Home</a>
+    </li>
+      <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="/messages">Messages</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item" aria-current="page">Received message</li>
+  </ol>
+</div>
+
 <section class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-      <span class="govuk-caption-xl">July 17 2021</span>
-      <h1 class="govuk-heading-xl">Payment recieved</h1>
+      <span class="govuk-caption-xl">Received on July 17 2021</span>
+      <h1 class="govuk-heading-xl">Please cancel a Deduction from Earnings Order</h1>
       <p class="govuk-body">
         For more help on downloading a PDF see our <a class="govuk-link" href="#" data-cw-hint="This link is not accessible from Navigable Model">How to use this site</a> on our help section or contact us.
       </p>
-      <div class="margin-large">
-        <dl class="govuk-summary-list">
-          <div class="govuk-summary-list__row">
-            <dt class=" govuk-summary-list__key" width="60%">Letter name</dt>
-            <dd class="govuk-summary-list__value word-wrap-break-word" width="40%"></dd>
-          </div>
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">Payment recieved</dt>
-            <dd class="govuk-summary-list__value word-wrap-break-word">
-              <a class="govuk-link" data-cw-hint="This link allows the customer to view/download the PDF file">Download PDF</a>
-            </dd>
-          </div>
-        </dl>
-      </div>
+      <h2 class="govuk-heading-s govuk-!-margin-bottom-1">Letter name</h2>
+      {{ govukSummaryList({
+        classes: "message-summary",
+        rows: [
+          {
+            key: {
+              text: "Please cancel a Deduction from Earnings Order"
+            },
+            value: {
+              html: '<a href="#">Download PDF</a>'
+            }
+          }
+        ]
+      }) }}
       <div class="govuk-!-margin-bottom-4">
         <p class="govuk-body">You need Adobe Acrobat Reader to view the PDF files. If you do not already have it on your computer, you can 
         <a href="#" data-cw-hint="This link is not accessible from Navigable Model">install the latest version Adobe Acrobat Reader (opens in a new tab).</a></p>

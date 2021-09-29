@@ -1,0 +1,130 @@
+
+{% extends "layout.html" %}
+
+{% block content %}
+{% include "includes/account-menu.html" %}
+
+<div class="govuk-breadcrumbs">
+  <ol class="govuk-breadcrumbs__list">
+
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="/home">Home</a>
+    </li>
+
+    <li class="govuk-breadcrumbs__list-item" aria-current="page">Messages</li>
+  </ol>
+</div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-half">
+    <h1 class="govuk-heading-xl">Messages</h1>
+  </div>
+  <div class="govuk-grid-column-one-half">
+    <a href="/messages/send-message" style="float: right" role="button" draggable="false" class="govuk-button govuk-button" data-module="govuk-button">
+      New message
+    </a>
+  </div>
+</div>
+
+<section class="govuk-grid-row">
+  <div class="govuk-grid-column-one-third">
+    <h2 class="govuk-heading-m"> Filters</h2>
+    <h3 class="govuk-heading-s"> Date received</h3>
+
+        {{ govukInput({
+          label: {
+            text: "Messages received after",
+            classes: "govuk-label"
+          },
+          id: "messages-after",
+          name: "messages-after",
+          hint: {
+            text: "For example 2020 or 21/11/2020"
+          }
+        }) }}
+
+        {{ govukInput({
+          label: {
+            text: "Messages received before",
+            classes: "govuk-label"
+          },
+          id: "messages-before",
+          name: "messages-before",
+          hint: {
+            text: "For example 2020 or 21/11/2020"
+          }
+        }) }}
+
+    </fieldset>
+    <p>
+      <a href="/messages/message">Clear all filters</a>
+    </p>
+    <p>
+      <a href="#" role="button" draggable="false" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+        Apply filter
+      </a>
+    </p>
+  </div>
+  <div class="govuk-grid-column-two-thirds">
+    <table class="govuk-table">
+      <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header">Subject</th>
+            <th scope="col" class="govuk-table__header">Date</th>
+          </tr>
+        </thead>
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header"><a href="/messages/message">Please cancel a Deduction from Earnings Order</a></th>
+          <td class="govuk-table__cell">July 17 2021</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header"><a href="/messages/message">Payment sent</a></th>
+          <td class="govuk-table__cell">July 14 2021</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header"><a href="/messages/message">Change to payment amount</a></th>
+          <td class="govuk-table__cell">July 1 2021</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header"><a href="/messages/message">Please cancel a Deduction from Earnings Order</a></th>
+          <td class="govuk-table__cell">July 17 2021</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header"><a href="/messages/message">Payment sent</a></th>
+          <td class="govuk-table__cell">July 14 2021</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header"><a href="/messages/message">Change to payment amount</a></th>
+          <td class="govuk-table__cell">July 1 2021</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header"><a href="/messages/message">Please cancel a Deduction from Earnings Order</a></th>
+          <td class="govuk-table__cell">July 17 2021</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header"><a href="/messages/message">Payment sent</a></th>
+          <td class="govuk-table__cell">July 14 2021</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header"><a href="/messages/message">Change to payment amount</a></th>
+          <td class="govuk-table__cell">July 1 2021</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="messages-pagination">
+      <ul class="govuk-list">
+        <li><a href="#" class="govuk-link"><< Previous</a></li>
+        <li><a href="#" class="govuk-link">1</a></li>
+        <li><a href="#" class="govuk-link">2</a></li>
+        <li><a href="#" class="govuk-link">3</a></li>
+        <li><a href="#" class="govuk-link">4</a></li>
+        <li><a href="#" class="govuk-link">Next >></a></li>
+      </ul>
+    </div>
+    
+  </div>
+</section>
+
+{% endblock %}
