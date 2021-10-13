@@ -16,49 +16,56 @@
 </div>
 
 <div class="govuk-grid-row">
-  <div class="govuk-grid-column-one-half">
-    <h1 class="govuk-heading-xl">Messages</h1>
+  <div class="govuk-grid-column-three-quarters">
+    <h1 class="govuk-heading-xl">Messages and contact history</h1>
   </div>
-  <div class="govuk-grid-column-one-half">
+  <div class="govuk-grid-column-one-quarter">
     <a href="/messages/send-message" style="float: right" role="button" draggable="false" class="govuk-button govuk-button" data-module="govuk-button">
       Send a message
     </a>
   </div>
 </div>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <p class="govuk-body">Letters and messages we have sent to you.</p>
+  </div>
+</div>
 
 <section class="govuk-grid-row">
   <div class="govuk-grid-column-one-third">
-    <h2 class="govuk-heading-m"> Filters</h2>
-    <h3 class="govuk-heading-s"> Date received</h3>
-
-        {{ govukInput({
-          label: {
-            text: "Messages received after",
-            classes: "govuk-label"
-          },
-          id: "messages-after",
-          name: "messages-after",
-          hint: {
-            text: "For example 2020 or 21/11/2020"
-          }
-        }) }}
-
-        {{ govukInput({
-          label: {
-            text: "Messages received before",
-            classes: "govuk-label"
-          },
-          id: "messages-before",
-          name: "messages-before",
-          hint: {
-            text: "For example 2020 or 21/11/2020"
-          }
-        }) }}
-
-    </fieldset>
+    <h2 class="govuk-heading-m">Filters</h2> 
     <p>
-      <a href="/messages/message">Clear all filters</a>
+      <a href="/messages/message">Clear filter</a>
     </p>
+    <h3 class="govuk-heading-s">Dates</h3>
+
+    {{ govukDateInput({
+      id: "date-from",
+      namePrefix: "date-from",
+      fieldset: {
+        legend: {
+          text: "From",
+          isPageHeading: false
+        }
+      },
+      hint: {
+        text: "For example, 27 3 2007"
+      }
+    }) }}
+
+    {{ govukDateInput({
+      id: "date-to",
+      namePrefix: "date-to",
+      fieldset: {
+        legend: {
+          text: "To",
+          isPageHeading: false
+        }
+      },
+      hint: {
+        text: "For example, 27 3 2008"
+      }
+    }) }}
     <p>
       <a href="#" role="button" draggable="false" class="govuk-button govuk-button--secondary" data-module="govuk-button">
         Apply filter
@@ -76,39 +83,39 @@
       <tbody class="govuk-table__body">
         <tr class="govuk-table__row">
           <th scope="row" class="govuk-table__header"><a href="/messages/message">Please cancel a Deduction from Earnings Order</a></th>
-          <td class="govuk-table__cell">July 17 2021</td>
+          <td class="govuk-table__cell">17/09/2021</td>
         </tr>
         <tr class="govuk-table__row">
           <th scope="row" class="govuk-table__header"><a href="/messages/message">Payment sent</a></th>
-          <td class="govuk-table__cell">July 14 2021</td>
+          <td class="govuk-table__cell">14/09/2021</td>
         </tr>
         <tr class="govuk-table__row">
           <th scope="row" class="govuk-table__header"><a href="/messages/message">Change to payment amount</a></th>
-          <td class="govuk-table__cell">July 1 2021</td>
+          <td class="govuk-table__cell">1/09/2021</td>
         </tr>
         <tr class="govuk-table__row">
           <th scope="row" class="govuk-table__header"><a href="/messages/message">Please cancel a Deduction from Earnings Order</a></th>
-          <td class="govuk-table__cell">July 17 2021</td>
+          <td class="govuk-table__cell">17/08/2021</td>
         </tr>
         <tr class="govuk-table__row">
           <th scope="row" class="govuk-table__header"><a href="/messages/message">Payment sent</a></th>
-          <td class="govuk-table__cell">July 14 2021</td>
+          <td class="govuk-table__cell">14/08/2021</td>
         </tr>
         <tr class="govuk-table__row">
           <th scope="row" class="govuk-table__header"><a href="/messages/message">Change to payment amount</a></th>
-          <td class="govuk-table__cell">July 1 2021</td>
+          <td class="govuk-table__cell">1/08/2021</td>
         </tr>
         <tr class="govuk-table__row">
           <th scope="row" class="govuk-table__header"><a href="/messages/message">Please cancel a Deduction from Earnings Order</a></th>
-          <td class="govuk-table__cell">July 17 2021</td>
+          <td class="govuk-table__cell">17/07/2021</td>
         </tr>
         <tr class="govuk-table__row">
           <th scope="row" class="govuk-table__header"><a href="/messages/message">Payment sent</a></th>
-          <td class="govuk-table__cell">July 14 2021</td>
+          <td class="govuk-table__cell">14/07/2021</td>
         </tr>
         <tr class="govuk-table__row">
           <th scope="row" class="govuk-table__header"><a href="/messages/message">Change to payment amount</a></th>
-          <td class="govuk-table__cell">July 1 2021</td>
+          <td class="govuk-table__cell">1/07/2021</td>
         </tr>
       </tbody>
     </table>
