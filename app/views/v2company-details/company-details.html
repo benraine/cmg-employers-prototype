@@ -88,11 +88,11 @@
       Company contact 
     </dt>
     <dd class="govuk-summary-list__value">
-      <p class="govuk-body">{{ data['contact-name']| default("John Smith") }}
+      <p class="govuk-body">{{ data['first-name'] }} {{data['last-name'] | default("John Smith")}}
       </p>
       <p class="govuk-body">{{ data['contact-number'] | default("07789 666 398") }}</p>
-      <p class="govuk-body">{{ data['contact-email'] | default("John.smith@gmail.com")}}</p>
-     
+      <p class="govuk-body">{{ data['query-type'] | default("All queries") }}</p>
+
     </dd>
     <dd class="govuk-summary-list__actions">
       <a class="govuk-link" href="sarah-details.html">

@@ -102,14 +102,19 @@
       Company contact 
     </dt>
     <dd class="govuk-summary-list__value">
-        <p class="govuk-body">{{ data['contact-name']| default("John Smith") }}
+        <p class="govuk-body">{{ data['first-name']}} {{ data['last-name']| default("John Smith") }}
         </p>
         <p class="govuk-body">{{ data['contact-number'] | default("07789 666 398") }}</p>
-        <p class="govuk-body">{{ data['contact-email'] | default("John.smith@gmail.com")}}</p>
+        <p class="govuk-body">{{ data['query-type'] | default("All queries") }}</p>
+
     </dd>
     <dd class="govuk-summary-list__actions">
       <a class="govuk-link" href="sarah-details.html">
-        Change<span class="govuk-visually-hidden"> contact details</span>
+        Change<span class="govuk-visually-hidden"> contact details</span><br>
+        <br>
+        <a href="what-did-you-expect.html">
+          Add another contact
+          </a>
       </a>
     </dd>
   </div>
@@ -119,16 +124,23 @@
         Company contact 
     </dt>
     <dd class="govuk-summary-list__value">
-        <p class="govuk-body">{{ data['contact-name2']| default("Sarah Bellingham") }}
+        <p class="govuk-body">{{ data['first-name2']}} {{ data['last-name2'] | default("Sarah Bellingham") }}
         </p>
         <p class="govuk-body">{{ data['contact-number2'] | default("07866 509 731") }}</p>
-        <p class="govuk-body">{{ data['contact-email2'] | default("Sarah.bellingham@gmail.com")}}</p>
+        <p class="govuk-body">{{ data['query-type2'] | default("All queries") }}</p>
+
     </dd>
     <dd class="govuk-summary-list__actions">
       <a class="govuk-link" href="contact-details2.html">
-        Change<span class="govuk-visually-hidden"> contact details</span>
+        Change<span class="govuk-visually-hidden"> contact details</span><br>
+        <br>
+        <a href="what-did-you-expect.html">
+          Remove contact
+          </a>
       </a>
     </dd>
+
+ 
   </div>
 
 <div class="govuk-summary-list__row">
@@ -139,6 +151,8 @@
         <p class="govuk-body">Recieve letters via post and online account</p>
 
       <p class="govuk-body">Recieve email notifications</p>
+      <p class="govuk-body">{{ data ['contact-by-email'] | default("company@email.com") }}</p>
+
     <dd class="govuk-summary-list__actions">
       <a class="govuk-link" href="contact-preferences.html">
         Change<span class="govuk-visually-hidden">contact preferences</span>

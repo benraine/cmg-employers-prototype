@@ -61,7 +61,7 @@
                       Name
                     </dt>
                     <dd class="govuk-summary-list__value">
-                      <p class="govuk-body">{{ data['contact-name2'] }}</p>
+                      <p class="govuk-body">{{ data['first-name2'] }} {{ data['last-name2']}}</p>
                     </dd>
                 
                     <dd class="govuk-summary-list__actions">
@@ -86,20 +86,21 @@
                       </a>
                     </dd>
                   </div>
-
                   <div class="govuk-summary-list__row">
                     <dt class="govuk-summary-list__key">
-                      Email address
+                      Reason for contacting {{ data ['first-name'] }} {{ data ['last-name'] }} 
                     </dt>
                     <dd class="govuk-summary-list__value">
-                      <p class="govuk-body">{{ data['contact-email2'] }}</p>
+                      <p class="govuk-body">{{ data['query-type2'] | default("All queries") }}</p>
                     </dd>
                     <dd class="govuk-summary-list__actions">
-                      <a class="govuk-link" href="change-email2.html">
+                      <a class="govuk-link" href="change-query-type2.html">
                         Change<span class="govuk-visually-hidden"> contact details</span>
                       </a>
                     </dd>
                   </div>
+
+                 
                 </dl>
                 <div class="govuk-form-group">
                
@@ -109,7 +110,7 @@
 </div>
 <div class="govuk-form-group">
                
-  <a href="company-details" role="button" draggable="false" class="govuk-button " data-module="govuk-button">
+  <a href="company-details2" role="button" draggable="false" class="govuk-button " data-module="govuk-button">
     Save and continue
     </a>
                 </div>

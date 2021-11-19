@@ -22,15 +22,15 @@
 
               <div class="govuk-radios">
                 <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="main-contact1" name="main-contact" type="radio" value= "{{ data['contact-name'] }}">
+                  <input class="govuk-radios__input" id="main-contact1" name="main-contact" type="radio" value= "{{ data['first-name'] }} {{ data['last-name']}}">
                   <label class="govuk-label govuk-radios__label" for="main-contact1">
-                    {{ data['contact-name'] |default ("John Smith") }}
+                    {{ data['first-name']}} {{ data['last-name'] |default ("John Smith") }}
                   </label>
                 </div>
                 <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="main-contact2" name="main-contact" type="radio" value="{{ data['contact-name2'] }}">
+                  <input class="govuk-radios__input" id="main-contact2" name="main-contact" type="radio" value="{{ data['first-name2'] }} {{ data['last-name2']}}">
                   <label class="govuk-label govuk-radios__label" for="main-contact2">
-                    {{ data['contact-name2'] |default ("Sandra Bellingham") }}
+                    {{ data['first-name2']}} {{ data['last-name2'] |default ("Sarah bellingham") }}
                   </label>
                 </div>
                 

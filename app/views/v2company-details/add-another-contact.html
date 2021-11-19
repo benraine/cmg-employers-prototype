@@ -55,26 +55,61 @@
 
                 <div class="govuk-form-group">
                     <label class="govuk-label" for="telephone-number">
-                      Contact name
+                      First name
                     </label>
-                    <input class="govuk-input govuk-input--width-20" id="name" name="contact-name2" value="" type="tel" autocomplete="tel"></div>
-      
+                    <input class="govuk-input govuk-input--width-20" id="first-name" name="first-name2" value="" type="tel" autocomplete="tel">
+                  </div>
+                  <div class="govuk-form-group">
+                    <label class="govuk-label" for="telephone-number">
+                     Last name
+                    </label>
+                    <input class="govuk-input govuk-input--width-20" id="last-name" name="last-name2" value="" type="tel" autocomplete="tel">
+                  </div>
                 <div class="govuk-form-group">
                     <label class="govuk-label" for="telephone-number">
                       UK telephone number
                     </label>
-                    <input class="govuk-input govuk-input--width-20" id="telephone-number" name="contact-number2" value="" type="tel" autocomplete="tel"></div>
-                <div class="govuk-form-group">
-                    <label class="govuk-label" for="email">
-                      Email address
-                    </label>
-                    <div id="email-hint" class="govuk-hint">
-                      We’ll use this to send you notications about your account
-                    </div>
-                    <input class="govuk-input" id="email" name="contact-email2" value="" type="email" spellcheck="false" aria-describedby="email-hint" autocomplete="email">
-                  </div>
+                    <input class="govuk-input govuk-input--width-20" id="telephone-number" name="contact-number2" value="" type="tel" autocomplete="tel">
+                
 
+                 </div>
                  
+                 <div class="govuk-form-group">
+                  <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+                      <h1 class="govuk-fieldset__heading">
+                        What type of queries can this contact answer?
+                      </h1>
+                    </legend>
+                    <div id="changed-name-hint" class="govuk-hint">
+                    </div>
+                    <div class="govuk-radios govuk-radios">
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="query-type2" name="query-type2" type="radio" value="Payroll queries">
+                        <label class="govuk-label govuk-radios__label" for="query-type2">
+                          Payroll queries
+                        </label>
+                      </div>
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="query-type2-2" name="query-type2" type="radio" value="HR queries">
+                        <label class="govuk-label govuk-radios__label" for="query-type2-2">
+                         HR queries
+                        </label>
+                      </div>
+                    
+
+                    <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="query-type2-3" name="query-type2" type="radio" value="All queries">
+                        <label class="govuk-label govuk-radios__label" for="query-type2-3">
+                          All queries
+                        </label>
+                      </div>
+                    </div>
+                
+               
+
+                </fieldset>
+            </div>
 
 
                   <button class="govuk-button" data-module="govuk-button">
