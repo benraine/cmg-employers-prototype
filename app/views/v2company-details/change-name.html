@@ -45,16 +45,21 @@
   <main class="govuk-main-wrapper " id="main-content" role="main">
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
-<h1 class="govuk-heading-l">Update {{ data['contact-name']| default("John Smith") }}'s name</h1>
+<h1 class="govuk-heading-l">Update {{ data['first-name']}} {{ data ['last-name']| default("John Smith") }}'s name</h1>
               <form action ="sarah-details.html" method="get">
 
 <div class="govuk-form-group">
   <label class="govuk-label" for="telephone-number">
-    Contact name
+   First name
   </label>
-  <input class="govuk-input govuk-input--width-20" id="name" name="contact-name" value="" type="text"></div>
+  <input class="govuk-input govuk-input--width-20" id="first-name" name="first-name" value="" type="text"></div>
 
-         
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="telephone-number">
+      Last name
+    </label>
+    <input class="govuk-input govuk-input--width-20" id="last-name" name="last-name" value="" type="text"></div>
+     
       
      
   

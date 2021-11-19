@@ -40,6 +40,7 @@
 
 </div>
 <a href="javascript:history.back()" class="govuk-back-link">Back</a>
+<form action ="company-details2.html" method="get">
 
 <h2 class="govuk-heading-l">How would you like to receive information from us?</h2>
 <div class="govuk-inset-text">You won't be completely 'paper-free' because sometimes we might have to contact you by post, but for everything else we'll just send you online messages through this site.</div>
@@ -54,12 +55,7 @@
         Select one option.
       </div>
       <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
-        <div class="govuk-radios__item">
-          <input class="govuk-radios__input" id="contact1" name="contact" type="radio" value="email" data-aria-controls="conditional-contact">
-          <label class="govuk-label govuk-radios__label" for="contact1">
-            Receive letters via post to my postal address
-          </label>
-        </div>
+        
        
         <div class="govuk-radios__item">
           <input class="govuk-radios__input" id="contact2" name="contact" type="radio" value="phone" data-aria-controls="conditional-contact-2">
@@ -76,6 +72,7 @@
         </div>
         </div>
       </div>
+     
       <div class="govuk-form-group">
         <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
           <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
@@ -83,7 +80,6 @@
               Do you want to recieve email notifications about your account?
             </h1>
           </legend>
-          
           <div id="contact-hint" class="govuk-hint">
             Select one option.
           </div>
@@ -94,22 +90,29 @@
                 Yes
               </label>
             </div>
-            
+            <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact">
+              <div class="govuk-form-group">
+                <label class="govuk-label" for="contact-by-email">
+                  Email address
+                </label>
+                <input class="govuk-input govuk-!-width-one-third" id="contact-by-email" value="" name="contact-by-email" type="email" spellcheck="false" autocomplete="email"></div>
+      
+            </div>
             <div class="govuk-radios__item">
               <input class="govuk-radios__input" id="notification-2" name="notification" type="radio" value="phone" data-aria-controls="conditional-contact-2">
               <label class="govuk-label govuk-radios__label" for="notification-2">
                 No
               </label>
             </div>
+           
+            </div>
             
-         
       
         </fieldset>
       </div>
-
-     
   
-    <a href="changed-contact-preferences.html" role="button" draggable="false" class="govuk-button " data-module="govuk-button">
+      <button class="govuk-button" data-module="govuk-button">
         Save and continue
-        </a>
+      </button>
+        </form>
 {% endblock %}

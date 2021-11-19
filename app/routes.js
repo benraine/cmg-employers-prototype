@@ -35,7 +35,7 @@ router.get('v2company-details/contact-details', function (req, res) {
   })
 
   router.get('v2company-details/added-contact', function (req, res) {
-    res.redirect('company-details2')
+    res.redirect('main-contact')
   })
 
   router.get('v2company-details/main-contact', function (req, res) {
@@ -50,6 +50,13 @@ router.get('v2company-details/contact-details', function (req, res) {
     res.redirect('company-details')
   })
 
+  router.get('v2company-details/change-query-type2', function (req, res) {
+    res.redirect('contact-details2')
+  })
+
+  router.get('v2company-details/contact-preferences', function (req, res) {
+    res.redirect('company-details2')
+  })
 // router.get('/messages', function(req, res) {
 //   res.render('messages/contact-history');
 // });
