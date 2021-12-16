@@ -57,6 +57,10 @@ router.get('v2company-details/contact-details', function (req, res) {
   router.get('v2company-details/contact-preferences', function (req, res) {
     res.redirect('company-details2')
   })
+
+  router.get('v2company-details/delete-contact', function (req, res) {
+    res.redirect('company-details')
+  })
 // router.get('/messages', function(req, res) {
 //   res.render('messages/contact-history');
 // });
