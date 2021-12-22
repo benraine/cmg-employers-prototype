@@ -49,16 +49,16 @@
         <main class="govuk-main-wrapper " id="main-content" role="main">
           <div class="govuk-grid-row">
             <div class="govuk-grid-column-two-thirds">
-              <h1 class="govuk-heading-l">Change {{ data['contact-name']| default("John Smith") }}'s contact email address</h1>
+              <h1 class="govuk-heading-l">What email address would you like to receieve notifications about your account to?</h1>
       
-              <form action ="sarah-details.html" method="get">
+              <form action ="contact-preferencesv2.html" method="get">
 
                 <div class="govuk-form-group">
                     <label class="govuk-label" for="email">
                       Email address
                     </label>
                     <div id="email-hint" class="govuk-hint">
-                      We’ll use this to send you notications about your account
+                      We currently send email notifications to test@notreal.com
                     </div>
                     <input class="govuk-input" id="email" name="contact-email" value="" type="email" spellcheck="false" aria-describedby="email-hint" autocomplete="email">
                   </div>
@@ -66,7 +66,7 @@
 
                   
                   <button class="govuk-button" data-module="govuk-button">
-                    Continue
+                    Save
                   </button>
               </form>
             </div>

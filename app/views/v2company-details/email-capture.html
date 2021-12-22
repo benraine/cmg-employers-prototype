@@ -49,30 +49,24 @@
         <main class="govuk-main-wrapper " id="main-content" role="main">
           <div class="govuk-grid-row">
             <div class="govuk-grid-column-two-thirds">
-              <h1 class="govuk-heading-l">Contact details</h1>
+              <h1 class="govuk-heading-l">What email address would you like to receieve notifications about your account to?</h1>
       
-              <form action ="company-details.html" method="get">
-
+              <form action ="contact-preferencesv2.html" method="get">
 
                 <div class="govuk-form-group">
-                    <label class="govuk-label" for="telephone-number">
-                      Contact name
+                    <label class="govuk-label" for="email">
+                      Email address
                     </label>
-                    <input class="govuk-input govuk-input--width-20" id="name" name="contact-name" value="" type="tel" autocomplete="tel"></div>
-      
-                <div class="govuk-form-group">
-                    <label class="govuk-label" for="telephone-number">
-                      Telephone number
-                    </label>
-                    <input class="govuk-input govuk-input--width-20" id="telephone-number" name="contact-number" value="" type="tel" autocomplete="tel"></div>
-             
+                    <div id="email-hint" class="govuk-hint">
+                    </div>
+                    <input class="govuk-input" id="email" name="contact-email" value="" type="email" spellcheck="false" aria-describedby="email-hint" autocomplete="email">
+                  </div>
 
 
                   
                   <button class="govuk-button" data-module="govuk-button">
-                    Continue
+                    Save
                   </button>
-                   
               </form>
             </div>
           </div>
