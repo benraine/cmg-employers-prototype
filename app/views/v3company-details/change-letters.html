@@ -40,10 +40,11 @@
 
 </div>
 <a href="javascript:history.back()" class="govuk-back-link">Back</a>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
 <form action ="contact-preferencesv2.html" method="get">
 
-<h2 class="govuk-heading-l">How would you like to receive information from us?</h2>
-<div class="govuk-inset-text">You won't be completely 'paper-free' because sometimes we might have to contact you by post.</div>
+<h2 class="govuk-heading-l">How does the company want to receive the letters we send?</h2>
 <div class="govuk-form-group">
     <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
       <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
@@ -54,15 +55,17 @@
         <div class="govuk-radios__item">
           <input class="govuk-radios__input" id="contact2" name="contact" type="radio" value="yes~email-capture" data-aria-controls="conditional-contact-2">
           <label class="govuk-label govuk-radios__label" for="contact2">
-           Receive digital copies to my self-service account
+           Online only
           </label>
+          <div id="sign-in-item-hint" class="govuk-hint govuk-radios__hint">
+            We will upload some of the letters to the employer online account. We may need to send some letters by post, but we will always send them online if we can.</div>
         </div>
         
         <div class="govuk-radios__item">
           <input class="govuk-radios__input" id="contact3" name="contact" type="radio" value="no~confirm-email" data-aria-controls="conditional-contact-3">
           <label class="govuk-label govuk-radios__label" for="contact3">
-            Receive letters to both my postal address and my self-service account
-          </label>
+Online and by post          </label>         <div id="sign-in-item-hint" class="govuk-hint govuk-radios__hint">
+  We will send all the letters by post and upload a copy to the employer online account if we can.</div>
         </div>
        
      
@@ -75,4 +78,6 @@
         Continue
       </button>
         </form>
+        </div>
+        </div>
 {% endblock %}
