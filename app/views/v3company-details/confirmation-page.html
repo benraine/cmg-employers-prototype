@@ -39,37 +39,37 @@
   </div>
 
 </div>
-<a href="javascript:history.back()" class="govuk-back-link">Back</a>
+
 <div class="govuk-width-container">
-      
-  <main class="govuk-main-wrapper " id="main-content" role="main">
-    <div class="govuk-grid-row">
-      <div class="govuk-grid-column-two-thirds">
-<h1 class="govuk-heading-l">Update  {{ data['first-name2'] }} {{ data ['last-name2']}}'s name</h1>
-              
-              <form action ="confirmation-page.html" method="get">
 
-<div class="govuk-form-group">
-  <label class="govuk-label" for="telephone-number">
-    First name
-  </label>
-  <input class="govuk-input govuk-input--width-20" id="first-name2" name="first-name2" value="" type="text"></div>
 
-  <div class="govuk-form-group">
-    <label class="govuk-label" for="telephone-number">
-      Last name
-    </label>
-    <input class="govuk-input govuk-input--width-20" id="last-name2" name="last-name2" value="" type="text"></div>
-         
-      
-     
+
+
+<div class="govuk-width-container">
+    <main class="govuk-main-wrapper govuk-main-wrapper--l" id="main-content" role="main">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+          <div class="govuk-panel govuk-panel--confirmation">
+            <h1 class="govuk-panel__title">
+                We've received your request
+            </h1>
+            <div class="govuk-panel__body">
+            </div>
+          </div>
   
-  <button class="govuk-button" data-module="govuk-button">
-    Continue
-  </button>
-  </form>
-     </div>
-     </div>
-     </main>
-      
-{% endblock %}
+          <p class="govuk-body">We've saved your changes.</p>
+
+          <p class="govuk-body">Thanks for updating your information.</p>
+
+  <p class="govuk-body">We've changed your company contact's details and we'll start using them straight away.
+
+</p>
+            <a href="company-details2" role="button" draggable="false" class="govuk-button" data-module="govuk-button">
+                Return to your account
+                </a>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  {% endblock %}
