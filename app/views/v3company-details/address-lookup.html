@@ -49,6 +49,9 @@
           <div class="govuk-grid-row">
             <div class="govuk-grid-column-two-thirds">
               <h1 class="govuk-heading-l">Select your address</h1>
+              <p class="govuk-hint">1 address found for <br>{{ data['address-line-1']| default("36") }}<br>
+                {{ data['address-postcode']| default("LN14 GDB") }} <a href="postal-address.html">change</a></p>
+
               <form action="/form-handler" method="post" novalidate>
 
               <div class="govuk-form-group"></div>
