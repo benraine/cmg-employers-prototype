@@ -49,13 +49,9 @@
           <div class="govuk-grid-row">
             <div class="govuk-grid-column-two-thirds">
               <h1 class="govuk-heading-l">What is your company's postal address?</h1>
-              <h2 class="govuk-heading-m">We currently send post to:</h2>
               <div id="contact-hint" class="govuk-hint">
                 
-                {{ data['address-line-1'] | default("72")}}
-                {{ data['where-do-you-live'] | default("Guild Street")}}<br>
-                London<br>
-                {{ data['address-postcode'] | default("SE23 6FH")}}<br>
+                A space is a special character. Don't use any special characters or more than one punctuation mark together. For example, 1 – 2
               </div>
               <form action ="address-lookup.html" method="get">
       
