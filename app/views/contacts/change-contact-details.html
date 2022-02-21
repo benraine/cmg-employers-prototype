@@ -53,15 +53,37 @@
       
               <form action="/form-handler" method="post" novalidate>
 
-                <h2 class="govuk-heading-l">Contact details</h2>
+                <h2 class="govuk-heading-l">Manage company contacts</h2>
         
+                <a href="add-another-contact.html" role="button" draggable="false" class="govuk-button" data-module="govuk-button">
+                  Add new contact
+                  </a>
+
+                <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+                  <div class="govuk-summary-list__row">
+                      <dt class="govuk-summary-list__key">
+                        Main contact 
+                      </dt>
+                      <dd class="govuk-summary-list__value">
+                        <p class="govuk-body">{{ data['main-contact'] | default("John Stones") }} 
+                        </p>
+                        
+                      </dd>
+                      <dd class="govuk-summary-list__actions">
+                        <a class="govuk-link" href="main-contact.html">
+                          Change<span class="govuk-visually-hidden"> contact details</span>
+                        </a>
+                      </dd>
+                    </div>
+                    
+              </dl>
                 <dl class="govuk-summary-list govuk-!-margin-bottom-9">
                   <div class="govuk-summary-list__row">
                     <dt class="govuk-summary-list__key">
                       Name
                     </dt>
                     <dd class="govuk-summary-list__value">
-                      <p class="govuk-body">{{ data['first-name']}} {{ data['last-name']| default("John Smith") }}</p>
+                      <p class="govuk-body">{{ data['first-name']}} {{ data['last-name']| default("John Stones") }}</p>
                     </dd>
                 
                     <dd class="govuk-summary-list__actions">
@@ -104,17 +126,116 @@
 
                  
                 </dl>
+                <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      Name
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                      <p class="govuk-body">{{ data['first-name']}} {{ data['last-name']| default("Sue Smith") }}</p>
+                    </dd>
+                
+                    <dd class="govuk-summary-list__actions">
+                      <a class="govuk-link" href="change-name.html">Change
+                       <span class="govuk-visually-hidden"> name</span>
+                      </a>
+                    </dd>
+                    
+                
+                  </div>
+                  
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      Telephone number
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                      <p class="govuk-body">{{ data['contact-number'] | default("07789 666 398") }}</p>
+                    </dd>
+                    <dd class="govuk-summary-list__actions">
+                      <a class="govuk-link" href="change-phone-number.html">
+                        Change<span class="govuk-visually-hidden"> contact details</span>
+                      </a>
+                    </dd>
+                  </div>
+
+
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      Reason for contacting {{ data ['first-name'] }} {{ data ['last-name'] }} 
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                      <p class="govuk-body">{{ data['query-type'] | default("All queries") }}</p>
+                    </dd>
+                    <dd class="govuk-summary-list__actions">
+                      <a class="govuk-link" href="change-query-type.html">
+                        Change<span class="govuk-visually-hidden"> contact details</span>
+                      </a>
+                    </dd>
+                  </div>
+                  <br>
+                  <button class="govuk-button govuk-button--warning" data-module="govuk-button">
+                    Remove Sue Smith
+                  </button>
+                 
+                </dl>
+                <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      Name
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                      <p class="govuk-body">{{ data['first-name']}} {{ data['last-name']| default("Zoe Burns") }}</p>
+                    </dd>
+                
+                    <dd class="govuk-summary-list__actions">
+                      <a class="govuk-link" href="change-name.html">Change
+                       <span class="govuk-visually-hidden"> name</span>
+                      </a>
+                    </dd>
+                    
+                
+                  </div>
+                  
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      Telephone number
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                      <p class="govuk-body">{{ data['contact-number'] | default("07789 666 398") }}</p>
+                    </dd>
+                    <dd class="govuk-summary-list__actions">
+                      <a class="govuk-link" href="change-phone-number.html">
+                        Change<span class="govuk-visually-hidden"> contact details</span>
+                      </a>
+                    </dd>
+                  </div>
+
+
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      Reason for contacting {{ data ['first-name'] }} {{ data ['last-name'] }} 
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                      <p class="govuk-body">{{ data['query-type'] | default("All queries") }}</p>
+                    </dd>
+                    <dd class="govuk-summary-list__actions">
+                      <a class="govuk-link" href="change-query-type.html">
+                        Change<span class="govuk-visually-hidden"> contact details</span>
+                      </a>
+                    </dd>
+                  </div>
+                <br>
+                  <button class="govuk-button govuk-button--warning" data-module="govuk-button">
+                    Remove Zoe Burns
+                  </button>
+                </dl>
                 <div class="govuk-form-group">
                
-                  <a href="add-another-contact.html" role="button" draggable="false" class="govuk-button govuk-button--secondary " data-module="govuk-button">
-                    Add another contact
-                    </a>
+                
 </div>
 <div class="govuk-form-group">
                
-  <a href="company-details" role="button" draggable="false" class="govuk-button " data-module="govuk-button">
-    Save and continue
-    </a>
+
                 </div>
               </form>
             </div>
