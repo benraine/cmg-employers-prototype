@@ -53,19 +53,20 @@
       
               <form action="/form-handler" method="post" novalidate>
 
-                <h2 class="govuk-heading-l">Manage company contacts</h2>
+                <h1 class="govuk-heading-xl">Manage company contacts</h1>
         
                 <a href="add-another-contact.html" role="button" draggable="false" class="govuk-button" data-module="govuk-button">
                   Add new contact
                   </a>
-
+                  <h2 class="govuk-heading-m">Main contact</h2>
                 <dl class="govuk-summary-list govuk-!-margin-bottom-9">
                   <div class="govuk-summary-list__row">
                       <dt class="govuk-summary-list__key">
-                        Main contact 
+                       
+                        John Stones
                       </dt>
                       <dd class="govuk-summary-list__value">
-                        <p class="govuk-body">{{ data['main-contact'] | default("John Stones") }} 
+                        <p class="govuk-body">  
                         </p>
                         
                       </dd>
@@ -77,7 +78,10 @@
                     </div>
                     
               </dl>
-                <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+              <h2 class="govuk-heading-m">John Stones</h2>
+
+              <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+
                   <div class="govuk-summary-list__row">
                     <dt class="govuk-summary-list__key">
                       Name
@@ -112,7 +116,7 @@
 
                   <div class="govuk-summary-list__row">
                     <dt class="govuk-summary-list__key">
-                      Reason for contacting {{ data ['first-name'] }} {{ data ['last-name'] }} 
+                      Contact reason
                     </dt>
                     <dd class="govuk-summary-list__value">
                       <p class="govuk-body">{{ data['query-type'] | default("All queries") }}</p>
@@ -126,6 +130,8 @@
 
                  
                 </dl>
+                <h2 class="govuk-heading-m">Sue Smith </h2>
+
                 <dl class="govuk-summary-list govuk-!-margin-bottom-9">
                   <div class="govuk-summary-list__row">
                     <dt class="govuk-summary-list__key">
@@ -161,7 +167,7 @@
 
                   <div class="govuk-summary-list__row">
                     <dt class="govuk-summary-list__key">
-                      Reason for contacting {{ data ['first-name'] }} {{ data ['last-name'] }} 
+                      Contact reason
                     </dt>
                     <dd class="govuk-summary-list__value">
                       <p class="govuk-body">{{ data['query-type'] | default("All queries") }}</p>
@@ -178,6 +184,8 @@
                   </button>
                  
                 </dl>
+                <h2 class="govuk-heading-m">Zoe Burns</h2>
+
                 <dl class="govuk-summary-list govuk-!-margin-bottom-9">
                   <div class="govuk-summary-list__row">
                     <dt class="govuk-summary-list__key">
@@ -213,7 +221,7 @@
 
                   <div class="govuk-summary-list__row">
                     <dt class="govuk-summary-list__key">
-                      Reason for contacting {{ data ['first-name'] }} {{ data ['last-name'] }} 
+                      Contact reason
                     </dt>
                     <dd class="govuk-summary-list__value">
                       <p class="govuk-body">{{ data['query-type'] | default("All queries") }}</p>
