@@ -79,6 +79,8 @@
   </div>
 
 </dl>
+<dl class="govuk-summary-list govuk-!-margin-bottom-9">
+
 <div class="govuk-summary-list__row">
   <dt class="govuk-summary-list__key">
     Contact preferences
@@ -117,31 +119,74 @@
 
 
 
-<h2 class="govuk-heading-m">Contact details</h2>
+<h2 class="govuk-heading-m">Company contact</h2>
 <dl class="govuk-summary-list govuk-!-margin-bottom-9">
   
   
-  <div class="govuk-summary-list__row">
-    <dt class="govuk-summary-list__key">
-      Company contact 
-    </dt>
-    <dd class="govuk-summary-list__value">
-      <p class="govuk-body">{{ data['first-name'] }} {{data['last-name'] | default("John Smith")}}
-      </p>
-      <p class="govuk-body">{{ data['contact-number'] | default("07789 666 398") }}</p>
-      <p class="govuk-body">{{ data['query-type'] | default("All queries") }}</p>
-
-    </dd>
-    <dd class="govuk-summary-list__actions">
-      <a class="govuk-link" href="sarah-details.html">
-        Change<span class="govuk-visually-hidden"> contact details</span><br>
-        <br>
-        <a href="add-another-contact.html" role="button" draggable="false" class="govuk-button" data-module="govuk-button">
-          Add new contact
+  <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+  
+  
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        Name 
+      </dt>
+      <dd class="govuk-summary-list__value">
+        <p class="govuk-body">{{ data['first-name'] }} {{data['last-name'] | default("John Smith")}}
+        </p>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="postal-address.html">
+            Change<span class="govuk-visually-hidden"> address</span>
           </a>
+        </dd>
+  
+     
+     
+    </div>
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        Telephone number
+      </dt>
+      <dd class="govuk-summary-list__value">
+        0191 766 565
+      </dd>
+      <dd class="govuk-summary-list__actions">
+        <a class="govuk-link" href="postal-address.html">
+          Change<span class="govuk-visually-hidden"> address</span>
+        </a>
+      </dd>
+    </div>
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        Mobile number 
+      </dt>
+      <dd class="govuk-summary-list__value">
+        {{ data['contact-number'] | default("07789 666 398") }}
+      </dd>
+      <dd class="govuk-summary-list__actions">
+        <a class="govuk-link" href="postal-address.html">
+          Change<span class="govuk-visually-hidden"> address</span>
+        </a>
+      </dd>
+    </div>
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        Contact reason
+      </dt>
+      <dd class="govuk-summary-list__value">
+        <p class="govuk-body">{{ data['query-type'] | default("All queries") }}</p>
+      </dd>
+      <dd class="govuk-summary-list__actions">
+        <a class="govuk-link" href="postal-address.html">
+          Change<span class="govuk-visually-hidden"> address</span>
+        </a>
+      </dd>
+    </div>
+    <br>
+    <a href="manage-contacts.html" role="button" draggable="false" class="govuk-button" data-module="govuk-button">
+      Add new contact
       </a>
-    </dd>
-  </div>
+  </dl>
+  
 
     
 
