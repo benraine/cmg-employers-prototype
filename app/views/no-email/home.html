@@ -79,7 +79,44 @@
   </div>
 
 </dl>
-  
+<div class="govuk-summary-list__row">
+  <dt class="govuk-summary-list__key">
+    Contact preferences
+  </dt>
+  <dd class="govuk-summary-list__value">
+    <p class="govuk-body">Recieve letters by post</p>
+    <a href="add-email.html">
+     Add email address
+     </a>
+
+  <dd class="govuk-summary-list__actions">
+    <a class="govuk-link" href="add-email.html">
+      Change<span class="govuk-visually-hidden">contact preferences</span>
+    </a>
+  </dd>
+</div>
+<div class="govuk-summary-list__row">
+  <dt class="govuk-summary-list__key">
+    Postal Address
+  </dt>
+  <dd class="govuk-summary-list__value">
+    {{ data['address-line-1'] | default("72")}}
+    
+    {{ data['where-do-you-live'] | default("Guild Street")}}<br>
+    London<br>
+    {{ data['address-postcode'] | default("SE23 6FH")}}<br>
+
+  </dd>
+  <dd class="govuk-summary-list__actions">
+    <a class="govuk-link" href="postal-address.html">
+      Change<span class="govuk-visually-hidden"> address</span>
+    </a>
+  </dd>
+</div>
+</dl>
+
+
+
 <h2 class="govuk-heading-m">Contact details</h2>
 <dl class="govuk-summary-list govuk-!-margin-bottom-9">
   
@@ -99,8 +136,8 @@
       <a class="govuk-link" href="sarah-details.html">
         Change<span class="govuk-visually-hidden"> contact details</span><br>
         <br>
-        <a href="add-another-contact.html">
-          Add another contact
+        <a href="add-another-contact.html" role="button" draggable="false" class="govuk-button" data-module="govuk-button">
+          Add new contact
           </a>
       </a>
     </dd>
@@ -108,41 +145,6 @@
 
     
 
-<div class="govuk-summary-list__row">
-    <dt class="govuk-summary-list__key">
-      Contact preferences
-    </dt>
-    <dd class="govuk-summary-list__value">
-      <p class="govuk-body">Recieve letters by post</p>
-      <a href="add-email.html">
-       Add email address
-       </a>
-
-    <dd class="govuk-summary-list__actions">
-      <a class="govuk-link" href="add-email.html">
-        Change<span class="govuk-visually-hidden">contact preferences</span>
-      </a>
-    </dd>
-  </div>
-  <div class="govuk-summary-list__row">
-    <dt class="govuk-summary-list__key">
-      Postal Address
-    </dt>
-    <dd class="govuk-summary-list__value">
-      {{ data['address-line-1'] | default("72")}}
-      
-      {{ data['where-do-you-live'] | default("Guild Street")}}<br>
-      London<br>
-      {{ data['address-postcode'] | default("SE23 6FH")}}<br>
-
-    </dd>
-    <dd class="govuk-summary-list__actions">
-      <a class="govuk-link" href="postal-address.html">
-        Change<span class="govuk-visually-hidden"> address</span>
-      </a>
-    </dd>
-  </div>
-</dl>
 
 
 {% endblock %}
