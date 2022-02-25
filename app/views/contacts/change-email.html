@@ -23,13 +23,13 @@
           </li>
 
           <li class="moj-sub-navigation__item">
-            <a class="moj-sub-navigation__link" aria-current="page" href="/v3company-details/company-details.html">Company details</a>
+            <a class="moj-sub-navigation__link" aria-current="page" href="//v3company-details/company-details.html">Company details</a>
           </li>
           <li class="moj-sub-navigation__item">
             <a class="moj-sub-navigation__link" href="/payments/payments.html">Payments</a>
           </li>
           <li class="moj-sub-navigation__item">
-            <a class="moj-sub-navigation__link" href="v3/v3company-details/company-details.html">Employee details</a>
+            <a class="moj-sub-navigation__link" href="/v3company-details/company-details.html">Employee details</a>
           </li>
         </ul>
 
@@ -49,33 +49,25 @@
         <main class="govuk-main-wrapper " id="main-content" role="main">
           <div class="govuk-grid-row">
             <div class="govuk-grid-column-two-thirds">
-              <h1 class="govuk-heading-l">is it a UK number?</h1>
+              <h1 class="govuk-heading-l"> What email address should we use to contact you? </h1>
       
-              <form action ="" method="get">
+              <form action ="confirmation-page.html" method="get">
 
-                <div class="govuk-radios govuk-radios">
-                    <div class="govuk-radios__item">
-                      <input class="govuk-radios__input" id="query-type2" name="query-type2" type="radio" value="yes~uk-mobile-or-landline">
-                      <label class="govuk-label govuk-radios__label" for="query-type2">
-                        Yes
-                      </label>
+                <div class="govuk-form-group">
+                    <label class="govuk-label" for="email">
+                      Email address
+                    </label>
+                    <div id="email-hint" class="govuk-hint">
+                      We currently send email notifications to test@notreal.com
                     </div>
-                    <div class="govuk-radios__item">
-                      <input class="govuk-radios__input" id="query-type2-2" name="query-type2" type="radio" value="no~mobile-or-landline">
-                      <label class="govuk-label govuk-radios__label" for="query-type2-2">
-                    No
-                      </label>
-                    </div>
-                  
-              
-              
+                    <input class="govuk-input" id="email" name="contact-email" value="" type="email" spellcheck="false" aria-describedby="email-hint" autocomplete="email">
                   </div>
-<br>
+
+
+                  
                   <button class="govuk-button" data-module="govuk-button">
-                    Continue
+                  Save and continue
                   </button>
-                
-                   
               </form>
             </div>
           </div>
@@ -84,4 +76,3 @@
   </div>  
 
 {% endblock %}
-

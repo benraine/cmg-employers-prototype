@@ -49,54 +49,34 @@
         <main class="govuk-main-wrapper " id="main-content" role="main">
           <div class="govuk-grid-row">
             <div class="govuk-grid-column-two-thirds">
-        
-      
+              <h1 class="govuk-heading-l">Is test@test.com the right address for us to contact you? </h1>
+  <span class="govuk-hint">We'll send all account notifications to this address</span>
               <form action ="confirmation-page.html" method="get">
 
               
-                 <div class="govuk-form-group">
-                  <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
-                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-                      <h1 class="govuk-fieldset__heading">
-                        Why should we contact John Smith?
-                      </h1>
-                    </legend>
-                    <div id="changed-name-hint" class="govuk-hint">
-                    </div>
-                    <div class="govuk-radios govuk-radios">
-                      <div class="govuk-radios__item">
-                        <input class="govuk-radios__input" id="query-type2" name="query-type2" type="radio" value="Payroll queries">
-                        <label class="govuk-label govuk-radios__label" for="query-type2">
-                          Payroll queries
-                        </label>
-                      </div>
-                      <div class="govuk-radios__item">
-                        <input class="govuk-radios__input" id="query-type2-2" name="query-type2" type="radio" value="HR queries">
-                        <label class="govuk-label govuk-radios__label" for="query-type2-2">
-                         HR queries
-                        </label>
-                      </div>
                     
-
-                    <div class="govuk-radios__item">
-                        <input class="govuk-radios__input" id="query-type2-3" name="query-type2" type="radio" value="All queries">
-                        <label class="govuk-label govuk-radios__label" for="query-type2-3">
-                          All queries
-                        </label>
+                      <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
+                        <div class="govuk-radios__item">
+                          <input class="govuk-radios__input" id="changed-name" name="changed-name" type="radio" value="yes~confirmation-page">
+                          <label class="govuk-label govuk-radios__label" for="changed-name">
+                            Yes
+                          </label>
+                        </div>
+                        <div class="govuk-radios__item">
+                          <input class="govuk-radios__input" id="changed-name-2" name="changed-name" type="radio" value="no~email-capture">
+                          <label class="govuk-label govuk-radios__label" for="changed-name-2">
+                            No
+                          </label>
+                        </div>
                       </div>
-                    </div>
-                
-               
+                  
+                  </div>
 
-                </fieldset>
-            </div>
-
-
+</div>
+</div>
                   <button class="govuk-button" data-module="govuk-button">
                     Save and continue
                   </button>
-                
-                   
               </form>
             </div>
           </div>
