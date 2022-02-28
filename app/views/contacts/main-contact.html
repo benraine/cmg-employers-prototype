@@ -15,7 +15,7 @@
             <fieldset class="govuk-fieldset">
               <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
                 <h1 class="govuk-fieldset__heading">
-                  Who do you want to be the main contact for your company?
+                  Who is the main company contact?
                 </h1>
               </legend>
              
@@ -28,9 +28,15 @@
                   </label>
                 </div>
                 <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="main-contact3" name="main-contact" type="radio" value="{{ data['first-name2'] }} {{ data['last-name2']}}">
+                  <label class="govuk-label govuk-radios__label" for="main-contact3">
+                    {{ data['first-name4']}} {{ data['last-name4'] |default ("Sue Smith") }}
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
                   <input class="govuk-radios__input" id="main-contact2" name="main-contact" type="radio" value="{{ data['first-name2'] }} {{ data['last-name2']}}">
                   <label class="govuk-label govuk-radios__label" for="main-contact2">
-                    {{ data['first-name2']}} {{ data['last-name2'] |default ("Sarah bellingham") }}
+                    {{ data['first-name3']}} {{ data['last-name3'] |default ("Zoe Burns") }}
                   </label>
                 </div>
                 
