@@ -59,7 +59,7 @@
                         Name
                       </dt>
                       <dd class="govuk-summary-list__value">
-                        <p class="govuk-body">{{ data['first-name2'] }} {{ data['last-name2']}}</p>
+                        <p class="govuk-body">{{ data['first-name']}} {{ data['last-name']| default("Ben Raine") }}</p>
                       </dd>
                   
                       <dd class="govuk-summary-list__actions">
@@ -76,7 +76,7 @@
                         Phone number
                       </dt>
                       <dd class="govuk-summary-list__value">
-                        <p class="govuk-body">{{ data['contact-number2'] }}</p>
+                        <p class="govuk-body">{{ data['contact-number'] | default("07741 282 751") }}</p>
                       </dd>
                       <dd class="govuk-summary-list__actions">
                         <a class="govuk-link" href="change-phone-number2.html">
@@ -89,7 +89,7 @@
                         Contact reason
                       </dt>
                       <dd class="govuk-summary-list__value">
-                        <p class="govuk-body">{{ data['query-type2'] }}</p>
+                        <p class="govuk-body">{{ data['query-type'] | default("Payroll queries") }}</p>
                       </dd>
                       <dd class="govuk-summary-list__actions">
                         <a class="govuk-link" href="change-phone-number2.html">

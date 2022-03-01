@@ -63,7 +63,7 @@
                   <div class="govuk-summary-list__row">
                       <dt class="govuk-summary-list__key">
                        
-                        John Stones
+                        {{ data['main-contact-first']}} {{ data['main-contact-last']| default("John Stones") }}
                       </dt>
                       <dd class="govuk-summary-list__value">
                         <p class="govuk-body">  
@@ -78,7 +78,7 @@
                     </div>
                     
               </dl>
-              <h2 class="govuk-heading-m">John Stones</h2>
+              <h2 class="govuk-heading-m">{{ data['main-contact-first']}} {{ data['main-contact-last']| default("John Stones") }}</h2>
 
               <dl class="govuk-summary-list govuk-!-margin-bottom-9">
 
@@ -87,7 +87,7 @@
                       Name
                     </dt>
                     <dd class="govuk-summary-list__value">
-                      <p class="govuk-body">{{ data['first-name']}} {{ data['last-name']| default("John Stones") }}</p>
+                      <p class="govuk-body">{{ data['first-name2']}} {{ data['last-name2']| default("John Stones") }}</p>
                     </dd>
                 
                     <dd class="govuk-summary-list__actions">
@@ -138,7 +138,7 @@
                       Name
                     </dt>
                     <dd class="govuk-summary-list__value">
-                      <p class="govuk-body">{{ data['first-name']}} {{ data['last-name']| default("Sue Smith") }}</p>
+                      <p class="govuk-body">{{ data['first-name2']}} {{ data['last-name2']| default("Sue Smith") }}</p>
                     </dd>
                 
                     <dd class="govuk-summary-list__actions">
@@ -155,7 +155,7 @@
                       Telephone number
                     </dt>
                     <dd class="govuk-summary-list__value">
-                      <p class="govuk-body">{{ data['contact-number'] | default("07789 666 398") }}</p>
+                      <p class="govuk-body">{{ data['contact-number'] | default("07234 313 075") }}</p>
                     </dd>
                     <dd class="govuk-summary-list__actions">
                       <a class="govuk-link" href="uk-or-not.html">
@@ -192,7 +192,7 @@
                       Name
                     </dt>
                     <dd class="govuk-summary-list__value">
-                      <p class="govuk-body">{{ data['first-name']}} {{ data['last-name']| default("Zoe Burns") }}</p>
+                      <p class="govuk-body">{{ data['first-name3']}} {{ data['last-name3']| default("Zoe Burns") }}</p>
                     </dd>
                 
                     <dd class="govuk-summary-list__actions">
@@ -209,7 +209,7 @@
                       Telephone number
                     </dt>
                     <dd class="govuk-summary-list__value">
-                      <p class="govuk-body">{{ data['contact-number'] | default("07789 666 398") }}</p>
+                      <p class="govuk-body">{{ data['contact-number'] | default("07734 236 076") }}</p>
                     </dd>
                     <dd class="govuk-summary-list__actions">
                       <a class="govuk-link" href="uk-or-not.html">
@@ -224,7 +224,7 @@
                       Contact reason
                     </dt>
                     <dd class="govuk-summary-list__value">
-                      <p class="govuk-body">{{ data['query-type'] | default("All queries") }}</p>
+                      <p class="govuk-body">{{ data['query-type'] | default("HR queries") }}</p>
                     </dd>
                     <dd class="govuk-summary-list__actions">
                       <a class="govuk-link" href="query-type.html">
@@ -238,14 +238,60 @@
                     Remove Zoe Burns
                   </a>
                 </dl>
-                <div class="govuk-form-group">
-               
-                
-</div>
-<div class="govuk-form-group">
-               
+                <h2 class="govuk-heading-m">{{ data['first-name']}} {{ data['last-name']| default("Ben Raine") }}</h2>
 
-                </div>
+                <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      Name
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                      <p class="govuk-body">{{ data['first-name']}} {{ data['last-name']| default("Ben Raine") }}</p>
+                    </dd>
+                
+                    <dd class="govuk-summary-list__actions">
+                      <a class="govuk-link" href="change-name.html">Change
+                       <span class="govuk-visually-hidden"> name</span>
+                      </a>
+                    </dd>
+                    
+                
+                  </div>
+                  
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      Telephone number
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                      <p class="govuk-body">{{ data['contact-number'] | default("07741 282 751") }}</p>
+                    </dd>
+                    <dd class="govuk-summary-list__actions">
+                      <a class="govuk-link" href="uk-or-not.html">
+                        Change<span class="govuk-visually-hidden"> contact details</span>
+                      </a>
+                    </dd>
+                  </div>
+
+
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      Contact reason
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                      <p class="govuk-body">{{ data['query-type'] | default("Payroll queries") }}</p>
+                    </dd>
+                    <dd class="govuk-summary-list__actions">
+                      <a class="govuk-link" href="query-type.html">
+                        Change<span class="govuk-visually-hidden"> contact details</span>
+                      </a>
+                    </dd>
+                  </div>
+                <br>
+                 
+                  <a href="delete-contact.html" role="button" draggable="false" class="govuk-button govuk-button--warning" data-module="govuk-button">
+                    Remove Ben Raine
+                  </a>
+                </dl>
               </form>
             </div>
           </div>
