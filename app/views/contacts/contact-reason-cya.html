@@ -57,29 +57,28 @@
                   <h2 class="govuk-heading-l">Check your answers</h2>
         
                 <dl class="govuk-summary-list govuk-!-margin-bottom-9">
-                  <div class="govuk-summary-list__row">
-                    <dt class="govuk-summary-list__key">
-                      Name
-                    </dt>
-                    <dd class="govuk-summary-list__value">
-                      <p class="govuk-body">{{ data['first-name'] }} {{ data['last-name']| default("John Smith") }}</p>
-                    </dd>
-                
-                    <dd class="govuk-summary-list__actions">
-                      <a class="govuk-link" href="change-name2.html">Change
-                       <span class="govuk-visually-hidden"> name</span>
-                      </a>
-                    </dd>
-                    
-                
-                  </div>
+                    <div class="govuk-summary-list__row">
+                        <dt class="govuk-summary-list__key">
+                           Ben Raine
+                        </dt>
+                        <dd class="govuk-summary-list__value">
+                          <p class="govuk-body"></p>
+                        </dd>
+                        <dd class="govuk-summary-list__actions">
+                          <a class="govuk-link" href="uk-or-not.html">
+                            <span class="govuk-visually-hidden"> contact details</span>
+                          </a>
+                        </dd>
+                      </div>
+                     
+                         
                   
                   <div class="govuk-summary-list__row">
                     <dt class="govuk-summary-list__key">
-                      Telephone number
+                       Contact reason
                     </dt>
                     <dd class="govuk-summary-list__value">
-                      <p class="govuk-body">{{ data['contact-number2']|default("07743 766 788") }}</p>
+                      <p class="govuk-body">All queries</p>
                     </dd>
                     <dd class="govuk-summary-list__actions">
                       <a class="govuk-link" href="uk-or-not.html">
@@ -87,28 +86,19 @@
                       </a>
                     </dd>
                   </div>
-                  <div class="govuk-summary-list__row">
-                    <dt class="govuk-summary-list__key">
-                      Contact reason
-                    </dt>
-                    <dd class="govuk-summary-list__value">
-                      <p class="govuk-body">{{ data['query-type2'] }}</p>
-                    </dd>
-                    <dd class="govuk-summary-list__actions">
-                      <a class="govuk-link" href="uk-or-not.html">
-                        Change<span class="govuk-visually-hidden"> contact details</span>
-                      </a>
-                    </dd>
-                  </div>
+                 
                   
                 </dl>
 
                
+                <div class="govuk-form-group">
                
+                  
+</div>
 <div class="govuk-form-group">
                
     <button class="govuk-button" data-module="govuk-button">
-        Confirm and send
+        Confirm and send 
       </button>
                 </div>
               </form>
