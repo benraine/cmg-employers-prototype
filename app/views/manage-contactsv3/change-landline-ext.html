@@ -49,47 +49,37 @@
         <main class="govuk-main-wrapper " id="main-content" role="main">
           <div class="govuk-grid-row">
             <div class="govuk-grid-column-two-thirds">
-              
+              <h1 class="govuk-heading-l">What is John Smith's telephone number?</h1>
       
-                <form action ="confirmation-page.html" method="get">
-
-
-                  <h2 class="govuk-heading-l">Check your answers</h2>
-        
-                <dl class="govuk-summary-list govuk-!-margin-bottom-9">
-                  
-                         
-                  
-                  <div class="govuk-summary-list__row">
-                    <dt class="govuk-summary-list__key">
-                       Mobile number
-                    </dt>
-                    <dd class="govuk-summary-list__value">
-                      <p class="govuk-body">+66 7412 82751</p>
-                    </dd>
-                    <dd class="govuk-summary-list__actions">
-                      <a class="govuk-link" href="uk-or-not.html">
-                        Change<span class="govuk-visually-hidden"> contact details</span>
-                      </a>
-                    </dd>
-                  </div>
-                 
-                  
-                </dl>
-
+              <form action ="cya-landline-ext.html" method="get">
                
+
                 <div class="govuk-form-group">
-               
-                  
-</div>
-<div class="govuk-form-group">
-               
-    <button class="govuk-button" data-module="govuk-button">
-        Confirm and send 
-      </button>
-      <a href="test-manage-contacts.html">Cancel</a>
-
+                    <label class="govuk-label" for="email">
+                      Telephone number
+                    </label>
+                    <div class="govuk-hint">For international numbers include the country code</div>
+                    <input class="govuk-input govuk-input--width-20" id="email" name="contact-number" value="" type="number" spellcheck="false" aria-describedby="email-hint" autocomplete="email">
+                   
+                   </div>
+                   <div class="govuk-form-group">
+                    <label class="govuk-label" for="email">
+                        Extension number
+                      </label>
+                      <div id="email-hint" class="govuk-hint">
+                      </div>
+                      <input class="govuk-input govuk-input govuk-input--width-20" id="email" name="contact-number" value="" type="number" spellcheck="false" aria-describedby="email-hint" autocomplete="email">
+                      
                 </div>
+
+
+                  
+                
+                  <button class="govuk-button" data-module="govuk-button">
+                    Continue
+                  </button>
+                  <br><a href="test-manage-contacts.html">Cancel</a>
+
               </form>
             </div>
           </div>

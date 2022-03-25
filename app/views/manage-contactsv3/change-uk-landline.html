@@ -49,7 +49,7 @@
         <main class="govuk-main-wrapper " id="main-content" role="main">
           <div class="govuk-grid-row">
             <div class="govuk-grid-column-two-thirds">
-              <h1 class="govuk-heading-l">What is {{ data['first-name']}} {{ data['last-name']| default("John Smith") }}'s telephone number?</h1>
+              <h1 class="govuk-heading-l">What is John Smith's telephone number?</h1>
       
               <form action ="uk-landline-cya.html" method="get">
                
@@ -58,6 +58,8 @@
                     <label class="govuk-label" for="email">
                       Telephone number
                     </label>
+                    <span class="govuk-hint">For UK telephone numbers, include the area code.</span>
+
                     <div id="email-hint" class="govuk-hint">
                     </div>
                     <input class="govuk-input" id="email" name="contact-number" value="" type="number" spellcheck="false" aria-describedby="email-hint" autocomplete="email">
@@ -69,6 +71,8 @@
                   <button class="govuk-button" data-module="govuk-button">
                     Continue
                   </button>
+                  <br><a href="test-manage-contacts.html">Cancel</a>
+
               </form>
             </div>
           </div>
