@@ -24,14 +24,14 @@
         
                 <dl class="govuk-summary-list govuk-!-margin-bottom-9">
                     
-                         
+                       <h3 class="govuk-heading-m">Added users</h3>  
                   
                   <div class="govuk-summary-list__row">
                     <dt class="govuk-summary-list__key">
                       Full name
                     </dt>
                     <dd class="govuk-summary-list__value">
-                      <p class="govuk-body">John Smith</p>
+                      <p class="govuk-body">{{data['full-name'] | default("John Jones")}}</p>
                     </dd>
                     <dd class="govuk-summary-list__actions">
                       <a class="govuk-link" href="uk-or-not.html">
@@ -45,7 +45,7 @@
                       Email address
                     </dt>
                     <dd class="govuk-summary-list__value">
-                      <p class="govuk-body">John.smith@email.com</p>
+                      <p class="govuk-body">{{data['email-address'] | default("John.jones@gmail.com")}}</p>
                     </dd>
                     <dd class="govuk-summary-list__actions">
                       <a class="govuk-link" href="uk-or-not.html">
@@ -53,6 +53,7 @@
                       </a>
                     </dd>
                   </div>
+                  
                   
                 </dl>
 
@@ -65,7 +66,7 @@
                         Full name
                       </dt>
                       <dd class="govuk-summary-list__value">
-                        <p class="govuk-body">Sarah Jones</p>
+                        <p class="govuk-body">{{data['full-name2'] | default("Sarah Smith")}}</p>
                       </dd>
                       <dd class="govuk-summary-list__actions">
                         <a class="govuk-link" href="uk-or-not.html">
@@ -79,7 +80,7 @@
                         Email address
                       </dt>
                       <dd class="govuk-summary-list__value">
-                        <p class="govuk-body">Sarah.jones@email.com</p>
+                        <p class="govuk-body">{{data['email-address2'] | default("sarah.smith@gmail.com")}}</p>
                       </dd>
                       <dd class="govuk-summary-list__actions">
                         <a class="govuk-link" href="uk-or-not.html">

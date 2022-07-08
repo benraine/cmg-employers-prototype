@@ -31,7 +31,7 @@
                       Full name
                     </dt>
                     <dd class="govuk-summary-list__value">
-                      <p class="govuk-body">John Smith</p>
+                      <p class="govuk-body">{{data['full-name'] | default("John Jones")}}</p>
                     </dd>
                     <dd class="govuk-summary-list__actions">
                       <a class="govuk-link" href="uk-or-not.html">
@@ -45,7 +45,7 @@
                       Email address
                     </dt>
                     <dd class="govuk-summary-list__value">
-                      <p class="govuk-body">John.smith@email.com</p>
+                      <p class="govuk-body">{{data['email-address'] | default("John.jones@gmail.com")}}</p>
                     </dd>
                     <dd class="govuk-summary-list__actions">
                       <a class="govuk-link" href="uk-or-not.html">
